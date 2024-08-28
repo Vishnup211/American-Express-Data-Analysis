@@ -1,5 +1,7 @@
 American Express Data Analysis
+
 Project Overview
+
 This project aims to predict customer churn for American Express by analyzing customer data. The goal is to identify patterns and risk factors associated with account closure, enabling proactive measures to retain customers.
 
 Methodology
