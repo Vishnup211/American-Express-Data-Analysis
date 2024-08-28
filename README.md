@@ -1,37 +1,30 @@
-# American-Express-Data-Analysis
-
+American Express Data Analysis
 Project Overview
-This project aims to predict whether an American Express customer is likely to close their account. By analyzing customer data, we can identify patterns and risk factors associated with account closure, enabling proactive measures to retain customers.
+This project aims to predict customer churn for American Express by analyzing customer data. The goal is to identify patterns and risk factors associated with account closure, enabling proactive measures to retain customers.
 
 Methodology
-Preprocessing:
-  Handling missing values
-  Outlier detection and treatment
-  Feature scaling
-Architecture
-The implemented ANN model uses a sequential architecture with the following layers:
-
-Input Layer: The size of this layer depends on the number of preprocessed features in your data (likely the number of columns after one-hot encoding).
-Hidden Layer 1: This layer has 6 neurons with a ReLU (Rectified Linear Unit) activation function. ReLU introduces non-linearity to the model, allowing it to learn complex relationships between features.
-Hidden Layer 2: Another hidden layer with 6 neurons and ReLU activation provides further abstraction and feature learning.
-Output Layer: The final layer has 1 neuron with a sigmoid activation function. The sigmoid function outputs a value between 0 and 1, which can be interpreted as the probability of a customer closing their account.
+Data Preprocessing
+Handling Missing Values: Imputed missing values using appropriate techniques (e.g., mean, median, mode, imputation methods).
+Outlier Detection and Treatment: Identified and addressed outliers using statistical methods or domain knowledge.
+Feature Scaling: Standardized numerical features to a common scale for better model convergence.
+Model Architecture
+Artificial Neural Network (ANN): A sequential ANN was employed, consisting of:
+Input Layer: Number of neurons determined by the number of preprocessed features.
+Hidden Layers: Two hidden layers with 6 neurons each, using ReLU activation function for non-linearity.
+Output Layer: Single neuron with sigmoid activation function to predict the probability of churn.
 Training
-The model training process involved the following steps:
-
-Splitting Data: The dataset was split into training and testing sets using a 80/20 ratio. The training set is used to train the model, and the testing set is used to evaluate its performance on unseen data.
-Batch Size: A batch size of 32 was used. This means the model updates its weights based on a mini-batch of 32 data points during each training iteration.
-Epochs: The model was trained for 120 epochs. An epoch represents one complete pass through the entire training dataset.
-Optimizer: The Adam optimizer was used for gradient descent. Adam is an efficient optimization algorithm that adapts the learning rate for each parameter based on historical gradients.
+Splitting Data: Dataset was divided into training (80%) and testing (20%) sets.
+Batch Size: 32 samples were processed in each batch during training.
+Epochs: The model was trained for 120 epochs, allowing for iterative learning.
+Optimizer: Adam optimizer was used for efficient gradient descent.
 Evaluation
-The following metrics were used to assess model performance:
-
-Accuracy: This metric measures the overall percentage of correct predictions made by the model. Your code snippet shows an accuracy of 85.35%.
-Confusion Matrix: The confusion matrix provides a detailed breakdown of how the model performed on each class. It helps identify potential biases or class imbalances.
-While accuracy is a good starting point, it's important to consider other metrics depending on the problem.  For imbalanced datasets (where one class is much more frequent), metrics like precision, recall, and F1-score might be more informative. Additionally, you could explore ROC-AUC (Area Under the ROC Curve) to evaluate the model's ability to discriminate between account closure and non-closure.
-
+Accuracy: Overall correct predictions.
+Confusion Matrix: Detailed breakdown of model performance for each class.
+Precision: Proportion of correct positive predictions.
+Recall: Proportion of actual positive cases correctly identified.
+F1-Score: Harmonic mean of precision and recall.
+ROC-AUC: Area under the Receiver Operating Characteristic curve, measuring the model's ability to distinguish between positive and negative classes.   
 Results
-
-Model Performance: Report the accuracy score (85.35%) and any other relevant metrics (e.g., precision, recall, F1-score, AUC-ROC) calculated on the test set.
-Comparison: If you have a baseline model (e.g., logistic regression), compare its performance to the ANN model. Did the ANN perform significantly better?
-Insights: Analyze the confusion matrix to identify potential issues. Are there any classes where the model performs poorly? This might indicate the need for further data exploration or model adjustments.
-By analyzing these results, you can gain valuable insights into the effectiveness of the ANN model for predicting customer account closure.
+Model Performance: The ANN achieved an accuracy of 85.35% on the testing set.
+Evaluation Metrics: Precision, recall, F1-score, and ROC-AUC were also calculated and analyzed.
+Insights: The confusion matrix provided insights into potential biases or areas where the model might be struggling.
