@@ -1,10 +1,10 @@
-American Express Data Analysis
+# American Express Data Analysis
 
-Project Overview
+# Project Overview
 
 This project aims to predict customer churn for American Express by analyzing customer data. The goal is to identify patterns and risk factors associated with account closure, enabling proactive measures to retain customers.
 
-Methodology
+# Methodology
 
 Data Preprocessing
 
@@ -16,14 +16,14 @@ Feature Scaling
 
 Model Architecture
 
-Artificial Neural Network (ANN): A sequential ANN was employed, consisting of:
+## Artificial Neural Network (ANN): A sequential ANN was employed, consisting of:
 	
     Input Layer: Number of neurons determined by the number of preprocessed features.
 	
 	Hidden Layers: Two hidden layers with 6 neurons each, using ReLU activation function for non-linearity.
  
     Output Layer: Single neuron with sigmoid activation function to predict the probability of churn.
-Training
+### Training
 	Splitting Data: Dataset was divided into training (80%) and testing (20%) sets.
  
 	Batch Size: 32 samples were processed in each batch during training.
@@ -31,7 +31,7 @@ Training
 	Epochs: The model was trained for 120 epochs, allowing for iterative learning.
  
 	Optimizer: Adam optimizer was used for efficient gradient descent.
-Evaluation
+### Evaluation
 	Accuracy: Overall correct predictions.
  
 	Confusion Matrix: Detailed breakdown of model performance for each class.
@@ -43,7 +43,7 @@ Evaluation
 	F1-Score: Harmonic mean of precision and recall.
  
 	ROC-AUC: Area under the Receiver Operating Characteristic curve, measuring the model's ability to distinguish between positive and negative classes.   
-Results
+### Results
 
 	Model Performance: The ANN achieved an accuracy of 85.35% on the testing set.
  
